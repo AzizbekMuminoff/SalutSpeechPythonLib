@@ -36,12 +36,5 @@ Obtain an API key from SalutSpeech, then initialize the API client:
 
     response = salut_speech.recognize_speech("path/to/your/audio/file.mp3")
 
-Documentation
 
-For detailed API usage and parameters, see the SalutSpeech API Documentation.
-Contributing
-
-Contributions are welcome! Please fork the repository, apply your changes, and submit a pull request.
-License
-
-This project is under the MIT License. For more details, see the LICENSE file.
+### For detailed API usage and parameters, see the SalutSpeech API Documentation.
