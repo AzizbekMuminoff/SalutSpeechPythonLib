@@ -1,20 +1,17 @@
-#SalutSpeech Python API Wrapper
+
+# SalutSpeech Python API Wrapper
 
 This repository hosts the SalutSpeech Python API Wrapper, a convenient tool for integrating the SalutSpeech API's speech synthesis and recognition services into your Python applications.
-Features
+The wrapper automatically manages access tokens and offers easier calls for speech synthesis and recognition with the SalutSpeech API.
 
-    Speech Synthesis: Easily convert text into spoken audio, with robust support for the Russian language.
-    Speech Recognition: Convert spoken audio into text, facilitating effective human-computer interaction.
-    Manages access tokens effectively: user don't have to update access tokens manually
-
-Getting Started
-Prerequisites
+## Getting Started
+### Prerequisites
 
 Ensure Python is installed on your machine. Additionally, you'll need the requests library, which can be installed via pip:
     
     pip install requests
 
-Installation
+### Installation
 
 To get started with the SalutSpeech Python API Wrapper, clone this repository:
 
@@ -22,29 +19,22 @@ To get started with the SalutSpeech Python API Wrapper, clone this repository:
     git clone https://github.com/yourusername/salutspeech-python-wrapper.git
     cd salutspeech-python-wrapper
 
-Usage
+### Usage
 
 Obtain an API key from SalutSpeech, then initialize the API client:
-
-python
     
     from salutwrapper import SalutWrapper
     
     api_key = 'your_api_key_here'
     salut_speech = SalutWrapper(api_key)
 
-Synthesizing Speech
+#### Text-to-speech
 
-Convert text to speech:
+    response = salut_speech.synthesize_speech("Привет, как дела?")
 
-    response = salut_speech.synthesize_speech("Привет, как дела?", "ru")
+#### Recognizing Speech
 
-Recognizing Speech
-
-Transcribe audio to text:
-
-
-    response = salut_speech.recognize_speech("path/to/your/audio/file.mp3", "ru")
+    response = salut_speech.recognize_speech("path/to/your/audio/file.mp3")
 
 Documentation
 
