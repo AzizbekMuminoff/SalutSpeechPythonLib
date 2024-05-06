@@ -1,8 +1,7 @@
 # SalutSpeechPythonLib
 Python wrapper designed to interact with the SalutSpeech API
-SalutSpeech Python API Wrapper
 
-Welcome to the official GitHub repository for the SalutSpeech Python API Wrapper! This project provides a simple and intuitive way to integrate SalutSpeech's speech synthesis and recognition capabilities into your Python applications.
+Welcome to the GitHub repository for the SalutSpeech API Python Wrapper! This project provides a simple and intuitive way to integrate SalutSpeech's speech synthesis and recognition capabilities into your Python applications.
 Features
 
     Speech Synthesis: Convert text to speech seamlessly with support for multiple languages, primarily focusing on Russian.
