@@ -16,8 +16,8 @@ Ensure Python is installed on your machine. Additionally, you'll need the reques
 To get started with the SalutSpeech Python API Wrapper, clone this repository:
 
 
-    git clone https://github.com/yourusername/salutspeech-python-wrapper.git
-    cd salutspeech-python-wrapper
+    git clone https://github.com/AzizbekMuminoff/SalutSpeechPythonLib.git
+    cd SalutSpeechPythonLib
 
 ### Usage
 
