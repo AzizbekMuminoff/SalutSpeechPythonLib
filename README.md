@@ -27,14 +27,15 @@ Obtain an API key from SalutSpeech, then initialize the API client:
     
     api_key = 'your_api_key_here'
     salut_speech = SalutWrapper(api_key)
+    salute_speech.start()
 
 #### Text-to-speech
 
-    response = salut_speech.synthesize_speech("Привет, как дела?")
+    response = salut_speech.text_to_audio("Привет, как дела?")
 
 #### Recognizing Speech
 
-    response = salut_speech.recognize_speech("path/to/your/audio/file.mp3")
+    response = salut_speech.audio_to_text("path/to/your/audio/file.mp3")
 
 
 ### For detailed API usage and parameters, see the SalutSpeech API Documentation.
