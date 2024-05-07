@@ -14,14 +14,13 @@ class SalutWrapper:
         self.uuid = self.generate_uuids()
 
 
-
     def start(self):
         task_thread = threading.Thread(target=self.poll_token)
         task_thread.start()
         return task_thread 
 
+    
     def poll_token(self):
-        
         headers = {
             'Authorization': 'Basic ' + self.api_key,
             'RqUID': self.uuid,
@@ -34,22 +33,17 @@ class SalutWrapper:
         }
 
         while True:
-            print("Starting to get a new bearer token: ")
-
+            print("Starting to get a new bearer token... ")
+            
             self.update_token(headers, data)
-
-            print("Starting to get a new bearer token: ")
-
             time.sleep(30)
 
     def update_token(self, headers, data):
         try:
             response = requests.post(self.url, headers=headers, data=data, verify=False)
             if response.status_code == 200:
-
                 response_data = response.json()
                 self.bearer_token = response_data['access_token']
-
             else:
                 print("Access token was not obtained. Please check your api_key")
         except Exception as e:
@@ -57,8 +51,7 @@ class SalutWrapper:
             
 
     def generate_uuids(self):
-        random_uuid = str(uuid.uuid4())
-
+        random_uuid = uuid.uuid4()
         return str(random_uuid)
     
     def check_token(self):
@@ -103,13 +96,12 @@ class SalutWrapper:
             'format': format,
             'voice': voice
         }
-
-        # Define the headers
+        
         headers = {
             'Authorization': 'Bearer ' + self.bearer_token,
             'Content-Type': 'application/text'
         }
-
+        
         try:
             with requests.post(self.tts_url, headers=headers, params=params, data=text.encode('utf-8'), verify=False, stream=True) as response:
                 response.raise_for_status()  # Check for HTTP errors
